@@ -34,3 +34,11 @@ And an appsetting.json with the following contents, replacing the following valu
 [YOUR-USER-HERE] with your username
 [YOUR-PASSWORD-HERE] with your password
 [YOUR-DB-NAME] with the name of your database
+
+## Known Bugs
+Page is not set up yet, so nothing is functional at this time.
+
+## Licence
+Code Licenced under GPL
+
+Copyright (c) February 2024 Ravin Fisher
