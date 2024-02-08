@@ -1,9 +1,8 @@
-using System.Diagnostics;
+// using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
-using System;
-using System.Threading.Tasks;
-//using Microsoft.EntityFrameworkCore;
+// using System;
+// using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,6 +13,6 @@ public class HomeController : Controller
   public ActionResult Index()
   {
     return View();
-   
-    }
+
   }
+}
