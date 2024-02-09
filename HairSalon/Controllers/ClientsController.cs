@@ -2,14 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
-
+using System;
 namespace HairSalon.Controllers
 {
-  public class ClientsConroller : Controller
+  public class ClientsController : Controller
   {
     private readonly HairSalonContext _db;
-
-    public ClientsConroller(HairSalonContext db)
+    public ClientsController(HairSalonContext db)
     {
       _db = db;
     }
@@ -17,7 +16,7 @@ namespace HairSalon.Controllers
     public ActionResult Index()
     {
       List<Client> model = _db.Clients.ToList();
-      return View();
+      return View(model);
     }
 
     public ActionResult Create()
@@ -31,12 +30,6 @@ namespace HairSalon.Controllers
       _db.Clients.Add(client);
       _db.SaveChanges();
       return RedirectToAction("Index");
-    }
-
-    public ActionResult Details(int id)
-    {
-      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
-      return View(thisClient);
     }
   }
 }
