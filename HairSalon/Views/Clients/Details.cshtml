@@ -2,13 +2,16 @@
   Layout = "_Layout";
 }
 @model HairSalon.Models.Client
-@using HairSalon.Models
 
-<h2>Client</h2>
+
+<h2>Client Information</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 <h3>@Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone)</h3>
 <h3>@Html.DisplayNameFor(model => model.Email): @Html.DisplayFor(model => model.Email)</h3>
+<hr />
+<h4>@Html.DisplayNameFor(model => model.Stylist): @Html.DisplayFor(model => model.Stylist)</h4>
+<hr />
 
-
-<button>@Html.ActionLink("Show all Clients", "Index")</button>
+<button>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</button>
+<button>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</button>
