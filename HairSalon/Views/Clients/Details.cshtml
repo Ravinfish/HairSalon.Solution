@@ -1,3 +1,6 @@
+@{
+  Layout = "_Layout";
+}
 @model HairSalon.Models.Client
 @using HairSalon.Models
 
@@ -7,4 +10,5 @@
 <h3>@Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone)</h3>
 <h3>@Html.DisplayNameFor(model => model.Email): @Html.DisplayFor(model => model.Email)</h3>
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+
+<button>@Html.ActionLink("Show all Clients", "Index")</button>

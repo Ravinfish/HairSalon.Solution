@@ -13,6 +13,8 @@ else
 {
   @foreach (Client client in Model)
   {
-    
+        <h4>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</h4>
   }
 }
+
+<button>@Html.ActionLink("Add new Client", "Create", "Clients")</button>
