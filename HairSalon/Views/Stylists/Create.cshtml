@@ -4,14 +4,15 @@
 
 @model HairSalon.Models.Stylist
 
-<h4>Add a new client</h4>
+<h4>Add a new Stylist</h4>
+<hr />
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new { placeholder = "Name" })
   <br />
   @Html.LabelFor(model => model.Specialty)
-  @Html.TextBoxFor(model => model.Specialty)
+  @Html.TextBoxFor(model => model.Specialty, new { placeholder = "Specialty" })
   <br />
   <input type="submit" value="Add Stylist" />
 }
